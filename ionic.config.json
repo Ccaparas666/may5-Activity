@@ -1,0 +1,7 @@
+{
+  "name": "may5-Activity",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

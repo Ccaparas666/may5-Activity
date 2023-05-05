@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Browser } from '@capacitor/browser';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
   constructor() {}
+  async openBrowser(){
+    await Browser.open({ url: 'https://www.google.com/?safe=active&ssui=on'});
+  }
 
 }

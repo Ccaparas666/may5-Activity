@@ -38,6 +38,17 @@ export class Tab2Page {
     if (image.dataUrl){
       //
       const name = 'img_' + this.counter.toString().padStart(3, '0')+ '_' + new Date().toISOString().split('T')[0];
+
+      //
+      this.images.push({name, dataUrl: image.dataUrl});
+
+      //
+      localStorage.setItem('images', JSON.stringify(this.images));
+
+      localStorage.setItem('lastSequenceNumber', this.counter.toString());
+
+      //
+      this.counter++;
     }
   }
 }
